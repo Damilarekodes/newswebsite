@@ -1,0 +1,25 @@
+
+  <!-- END header -->
+  <!-- BEGIN content -->
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="content" style="background-color: black;">
+    <!-- begin post -->
+    {% for article in articles %}
+    <div class="post">
+      
+      <div class="thumb"><a href="{{ article.get_absolute_url }}">
+        <img src="{{ article.image.url }}"  alt="" /></a></div>
+      <h2><a href="{{ article.get_absolute_url }}">{{ article.headline }}</a></h2>
+      <p class="date"> Publish by {{article.author}} on {{ article.publish|date:"M Y" }}</p>
+      <p2>  {{article.body|slice:100}}..... </p2> <br> <br> 
+      <a class="continue" href="{{ article.get_absolute_url }}">Continue Reading</a> </div>
+      
+      
+    {% endfor %}
+    </div>
+    <!-- end post -->
+    
+</body>
+</html>
+{% endblock %}

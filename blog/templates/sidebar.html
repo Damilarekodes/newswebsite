@@ -1,0 +1,101 @@
+<div id="sidebar" style="background-color: red;">
+    <!-- begin ads -->
+    <div class="ads"> <a href="#"><img src="images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="images/ad125x125.jpg" alt="" /></a> <a href="#"><img src="images/ad125x125.jpg" alt="" /></a> </div>
+    <!-- end ads -->
+    <!-- begin search -->
+    <form class= 'search' method="GET">
+      <input type="text" id="query" name="query" class="textbox" placeholder="Search">
+      <button type = "submit" class="button">
+        <i class='bx bx-search'></i>
+      </button>
+    </form>
+    
+    
+    <!-- end search -->
+    <div class="wrapper">
+      
+      <!-- begin popular posts -->
+      <h2>Latest News</h2>
+      {% for article in articles %}
+      <ul>
+        <li><a href="{{ article.get_absolute_url }}">{{article.headline}}</a></li>
+</ul>
+{% empty %}
+<h3>No Featured Article at the Moment...</h3>  
+{% endfor %}
+      <!-- end popular posts -->
+      <!-- begin flickr photos -->
+      <!--h2>Flickr Photos</h2-->
+      <div class="flickr"> <a href="#"><img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" />
+    </a> <a href="#"><img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" />
+      </a> <a href="#"><img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" /></a> <a href="#">
+        <img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" />
+    </a> <a href="#"><img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" />
+        </a> <a href="#"><img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" /></a> </div>
+      <!-- end flickr photos -->
+      <!-- begin featured video -->
+      <h2>Advertisement</h2>
+      <div class="video"> <img src="https://hardrayscode.github.io/trying/ad125x125.jpg" alt="" /> </div>
+      <!-- end featured video -->
+      <!-- begin tags -->
+      <!--h2>Tags</h2>
+      <div class="tags"> </div-->
+      <!-- end tags -->
+      <!-- BEGIN left -->
+      <div class="l sbar">
+        <!-- begin categories -->
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="#">Politics</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Religion</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Entertainment</a></li>
+        </ul>
+        <!-- end categories -->
+        <!-- begin pages -->
+        <!--h2>Pages</h2>
+        <ul>
+          <!--li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul-->
+        <!-- end pages -->
+      </div>
+      <!-- END left -->
+      <!-- BEGIN right -->
+      <div class="r sbar">
+        <!-- begin archives -->
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About US</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+
+        </ul>
+        <!-- end archives -->
+        <!-- begin blogroll -->
+        <h2></h2>
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <!-- end blogroll -->
+        <!-- begin meta -->
+        <h2></h2>
+        <ul>
+          <li><a href="#"></a></li>
+        </ul>
+        <!-- end meta -->
+      </div>
+      <!-- END right -->
+    </div>
+  </div>
